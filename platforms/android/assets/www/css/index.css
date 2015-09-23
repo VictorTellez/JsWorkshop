@@ -89,11 +89,71 @@ h1 {
     to { opacity: 1.0; }
 }
 
-table {
+ul {
+    margin: auto auto;
     margin: 20px;
+    padding: 0px;
     font-size: 18px;
+    list-style-type: none;
 }
 
-table td {
-    padding: 20px;
+ul li {
+    padding: inherit;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    float:left
+    *display:inline; /*IE7*/
+    *zoom:1; /*IE7*/
+    color:white;
+}
+
+
+/* unvisited a link */
+a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* selected li link */
+a:active {
+    text-decoration: none;
+}
+
+
+/* unvisited link */
+ul li:link {
+    background-color: ##E4E4E4;
+    text-decoration: none;
+}
+
+/* visited link */
+ul li:visited {
+    color: #000000;
+    background-color: #666666;
+    text-decoration: none;
+}
+
+/* mouse over link */
+ul li:hover {
+    background-color: #999999;
+    text-decoration: none;
+}
+
+/* selected link */
+ul li:active {
+    background-color: #666666;
+    text-decoration: none;
 }

@@ -47,5 +47,36 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
 app.initialize();
+
+
+/* Links for the examples */
+var links = [
+                { linkName:"Link 1" , linkUrl:"#" },
+                { linkName:"Link 2" , linkUrl:"#" },
+                { linkName:"Link 3" , linkUrl:"#" },
+                { linkName:"Link 4" , linkUrl:"#" },
+                { linkName:"Link 5" , linkUrl:"#" },
+                { linkName:"Link 6" , linkUrl:"#" }
+];
+
+function createList() {
+
+    console.log(" tellezJS createList: ");
+
+    var filledList = "";
+
+    for (i = 0; i < links.length-1; i++) {
+
+        filledList += '<li> <a href=' + links[i].linkUrl + '>' +  links[i].linkName + '</li>'; 
+
+    }
+    
+    var list = document.getElementById("list");
+    console.log(" tellezJS list: " + list);
+    list.innerHTML = filledList;
+
+}
+
+createList();
+
