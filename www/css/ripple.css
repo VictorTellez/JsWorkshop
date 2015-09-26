@@ -1,0 +1,108 @@
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+    text-align:center;
+}
+
+#wrap {
+  position: absolute;
+  width: 100%;
+  margin-top:10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+#list{
+  margin: auto auto;
+  padding: auto auto;
+  font-size: 18px;
+  list-style-type: none;
+  text-align: center;
+  -webkit-box-flex: 5;
+  -webkit-flex: 5;
+  -ms-flex: 5;
+  flex: 5;
+  align-items: center;
+}
+
+h1 {
+  font-size:30px;
+  font-weight:bold;
+  margin-top:40px;
+  overflow:visible;
+  padding:0px;
+  text-align:center;
+  color: #333;  
+}
+
+button {
+  position: relative;
+  display: block;
+  width: 13em;
+  height: 3em;
+  margin: 2em;
+  border: none;
+  outline: none;
+  letter-spacing: .2em;
+  font-weight: bold;
+  background: #4285f4;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(0,0,0,.25);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.ripple.show {
+  -webkit-animation: ripple .5s ease-out;
+  animation: ripple .5s ease-out;
+}
+@-webkit-keyframes 
+ripple { to {
+ -webkit-transform: scale(1.5);
+ transform: scale(1.5);
+ opacity: 0;
+}
+}
+@keyframes 
+ripple { to {
+ -webkit-transform: scale(1.5);
+ transform: scale(1.5);
+ opacity: 0;
+}
+}

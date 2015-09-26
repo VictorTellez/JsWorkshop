@@ -52,7 +52,7 @@ app.initialize();
 
 /* Links for the examples */
 var links = [
-                { linkName:"Link 1" , linkUrl:"#" },
+                { linkName:"Link 1" , linkUrl:"link1.html" },
                 { linkName:"Link 2" , linkUrl:"#" },
                 { linkName:"Link 3" , linkUrl:"#" },
                 { linkName:"Link 4" , linkUrl:"#" },
@@ -68,15 +68,41 @@ function createList() {
 
     for (i = 0; i < links.length-1; i++) {
 
-        filledList += '<li> <a href=' + links[i].linkUrl + '>' +  links[i].linkName + '</li>'; 
+        //filledList += '<li> <button href=' + links[i].linkUrl + '>' +  links[i].linkName + '</button></li>'; 
+        filledList += '<button href=' + links[i].linkUrl + '>' +  links[i].linkName + '</button>'; 
 
     }
     
     var list = document.getElementById("list");
-    console.log(" tellezJS list: " + list);
     list.innerHTML = filledList;
 
 }
 
 createList();
+
+
+var addRippleEffect = function (e) {
+    var target = e.target;
+    if (target.tagName.toLowerCase() !== 'button') return false;
+    var rect = target.getBoundingClientRect();
+    var ripple = target.querySelector('.ripple');
+    if (!ripple) {
+        ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        ripple.style.height = ripple.style.width = Math.max(rect.width, rect.height) + 'px';
+        target.appendChild(ripple);
+    }
+    ripple.classList.remove('show');
+    var top = e.pageY - rect.top - ripple.offsetHeight / 2 - document.body.scrollTop;
+    var left = e.pageX - rect.left - ripple.offsetWidth / 2 - document.body.scrollLeft;
+    ripple.style.top = top + 'px';
+    ripple.style.left = left + 'px';
+    ripple.classList.add('show');
+
+    alert(" target: " + target + " href: " + target.href);
+    return false;
+}
+
+document.addEventListener('click', addRippleEffect, true);
+
 
