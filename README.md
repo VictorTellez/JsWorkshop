@@ -1,7 +1,7 @@
 # JsWorkshop
 Workshop to learn in a cool way.
 
-## Concepts:
+# Concepts
 
 - Sync/Asyc, What are?
 - Global Object (front end and back end)
